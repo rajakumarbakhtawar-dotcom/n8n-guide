@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the n8n Edit Field (Set) Node</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --accent-color: #ff6b6b;
+            --primary-color: #4a90e2;
+            --code-bg: #2d3748;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #2d3748;
+            margin-top: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        blockquote {
+            background-color: #fff5f5;
+            border-left: 5px solid var(--accent-color);
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        blockquote strong {
+            color: #c53030;
+            font-style: normal;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85em;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>What is the Edit Field (Set) Node in n8n?</h1>
+    <p>The <strong>Edit Field (Set)</strong> node is one of the most fundamental and frequently used nodes in n8n. Its primary purpose is to <strong>manipulate data</strong> flowing through your workflow.</p>
+    <p>Think of it as a data-shaping tool: it allows you to create new fields, update existing ones, remove clutter, or completely rewrite the data structure passing from one node to the next.</p>
+
+    <h2>Key Use Cases</h2>
+    <ul>
+        <li><strong>Adding New Fields:</strong> Create a brand new variable or key-value pair (e.g., combining <code>firstName</code> and <code>lastName</code> into <code>fullName</code>).</li>
+        <li><strong>Modifying Existing Data:</strong> Update the value of a field that already exists (e.g., converting text to lowercase or formatting a date).</li>
+        <li><strong>Data Type Conversion:</strong> Explicitly cast data types, such as turning a string <code>"125"</code> into a proper number <code>125</code>.</li>
+        <li><strong>Cleaning Up Payload (Removing Fields):</strong> Keep only the specific fields you need and drop the rest to keep your workflow clean and fast.</li>
+    </ul>
+
+    <h2>The Core Modes</h2>
+    <ul>
+        <li><strong>Manual Mapping:</strong> Explicitly define individual fields, their types, and assign static or dynamic values.</li>
+        <li><strong>Remove Fields:</strong> Specify a list of field names that you want to delete from the incoming JSON payload.</li>
+        <li><strong>Keep Only Set Fields (Toggle):</strong> When turned on, the node wipes out the entire incoming payload and <em>only</em> outputs the exact fields you explicitly defined inside the node.</li>
+    </ul>
+
+    <blockquote>
+        <strong>Explanation for a Donkey 🐴</strong>
+        "Listen up, you stubborn jackass. You know how when you haul a big sack of vegetables from the garden, it’s full of rocks, dirt, weeds, and a few good carrots? You can't just dump all that dirt into your food trough.<br><br>
+        The Edit Field (Set) node is you standing by the trough, fixing the pile: adding an apple, wiping the dirt off a potato, kicking the rocks away with your hoof, or throwing everything out except that one juicy carrot. It cleans up the garbage so you only carry exactly what you need to the next barn!"
+    </blockquote>
+
+    <div class="footer">
+        Generated from our conversation • Built with HTML & CSS
+    </div>
+</div>
+
+</body>
+</html>
